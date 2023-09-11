@@ -15,7 +15,8 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("SqlServer")));
 builder.Services.AddScoped<IUsersRepository, UsersRepository>();
 builder.Services.AddScoped<IRolesRepository, RolesRepository>();
-builder.Services.AddGraphQLServer().AddQueryType<Query>().AddMutationType<UserMutations>();
+builder.Services.AddGraphQLServer().AddQueryType<Query>().AddMutationType<Mutations>();
+
 
 /*-------------------------------------------------------------------------------------------------------------------------------------------------*/
 
